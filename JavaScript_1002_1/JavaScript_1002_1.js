@@ -12,3 +12,51 @@
 각 테스트 케이스마다 류재명이 있을 수 있는 위치의 수를 출력한다.
 만약 류재명이 있을 수 있는 위치의 개수가 무한대일 경우에는 -1 출력한다.
 */
+
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().split('\n');
+const n = parseInt(input[0]);
+const other = input.slice(1).map(line => line.split(' ').map(Number));
+
+const result = [];
+
+for(let i=0;i<n;i++){
+    const [x1, y1, r1, x2, y2, r2] = other[i];
+    const R = Math.sqrt((x2-x1)**2 + (y2-y1)**2);
+    
+    let big, small;
+    
+    if(r1>r2){
+        big=r1;
+        small=r2;
+    }
+    else{
+        big=r2;
+        small=r1;
+    }
+    
+    if(big>=R && R>0){
+        if(big>R+small)
+            result.push(0);
+        else if(big<R+small)
+            result.push(2);
+        else
+            result.push(1);
+    }
+    else if(R>big){
+        if(R>big+small)
+            result.push(0);
+        else if(R===big+small)
+            result.push(1);
+        else
+            result.push(2);
+    }
+    else{
+        if(big==small)
+            result.push(-1);
+        else
+            result.push(0);
+    }
+}
+
+console.log(result.join('\n'));
