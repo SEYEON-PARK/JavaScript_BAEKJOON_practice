@@ -7,7 +7,7 @@
 */
 
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().split(' ');
+const input = fs.readFileSync('/dev/stdin').toString().split(' '); // 공백을 기준으로 잘라서 배열을 만들어 input에 저장
 const A = parseInt(input[0]);
 const B = parseInt(input[1]);
 
