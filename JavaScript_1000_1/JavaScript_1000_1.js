@@ -8,7 +8,7 @@
 
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split(' '); // 공백을 기준으로 잘라서 배열을 만들어 input에 저장
-const A = parseInt(input[0]);
+const A = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 A에 저장
 const B = parseInt(input[1]);
 
-console.log(A+B);
+console.log(A+B); // 결과 출력하기
