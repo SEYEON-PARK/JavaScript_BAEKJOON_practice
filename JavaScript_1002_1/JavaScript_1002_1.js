@@ -14,9 +14,9 @@
 */
 
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().split('\n');
-const n = parseInt(input[0]);
-const other = input.slice(1).map(line => line.split(' ').map(Number));
+const input = fs.readFileSync('/dev/stdin').toString().split('\n'); // 한 줄 단위로 잘라서 input에 저장
+const n = parseInt(input[0]); // input[0]을 정수형으로 형변환하여 n에 저장
+const other = input.slice(1).map(line => line.split(' ').map(Number)); // input의 첫 번째 요소만 제외하고 나머지 요소들을 하나씩 line에 넣는다. line을 공백을 기준으로 잘라 숫자로 형변환하여 배열 형태로 반환한다. 결론적으로 2차원 배열이 만들어진다.
 
 const result = [];
 
