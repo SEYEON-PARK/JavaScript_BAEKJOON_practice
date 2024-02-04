@@ -12,27 +12,29 @@
 각 테스트 케이스마다 류재명이 있을 수 있는 위치의 수를 출력한다.
 만약 류재명이 있을 수 있는 위치의 개수가 무한대일 경우에는 -1 출력한다.
 */
-
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split('\n'); // 한 줄 단위로 잘라서 input에 저장
 const n = parseInt(input[0]); // input[0]을 정수형으로 형변환하여 n에 저장
-const other = input.slice(1).map(line => line.split(' ').map(Number)); // input의 첫 번째 요소만 제외하고 나머지 요소들을 하나씩 line에 넣는다. line을 공백을 기준으로 잘라 숫자로 형변환하여 배열 형태로 반환한다. 결론적으로 2차원 배열이 만들어진다.
 
-const result = [];
+// input의 첫 번째 요소만 제외하고 나머지 요소들을 하나씩 line에 넣는다.
+// line을 공백을 기준으로 잘라 숫자로 형변환하여 배열 형태로 반환한다. 결론적으로 2차원 배열이 만들어져서 other에 저장된다.
+const other = input.slice(1).map(line => line.split(' ').map(Number));
 
-for(let i=0;i<n;i++){
-    const [x1, y1, r1, x2, y2, r2] = other[i];
-    const R = Math.sqrt((x2-x1)**2 + (y2-y1)**2);
+const result = []; // 결과를 저장할 배열 result 선언
+
+for(let i=0;i<n;i++){ // 0부터 n보다 작을 때까지 1씩 증가시킨 값을 i에 대입하며 반복
+    const [x1, y1, r1, x2, y2, r2] = other[i]; // other[i] 요소들을 변수에 저장
+    const R = Math.sqrt((x2-x1)**2 + (y2-y1)**2); // 두 점 사이의 거리 구하기!
     
-    let big, small;
+    let big, small; // 두 점 중 큰 값과 작은 값을 넣을 변수 선언
     
-    if(r1>r2){
-        big=r1;
-        small=r2;
+    if(r1>r2){ // 만약, r1이 r2보다 크다면
+        big=r1; // big에 r1 대입하기
+        small=r2; // small에 r2 대입하기
     }
-    else{
-        big=r2;
-        small=r1;
+    else{ // r1이 r2보다 크지 않다면(작거나 같다면)
+        big=r2; // big에 r2 대입하기
+        small=r1; // small에 r1 대입하기
     }
     
     if(big>=R && R>0){
