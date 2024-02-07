@@ -11,4 +11,4 @@ const input = fs.readFileSync('/dev/stdin').toString().split(' '); // 공백을 
 const A = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 A에 저장
 const B = parseInt(input[1]); // input[1]을 정수형으로 바꿔서 B에 저장
 
-console.log(A-B); // 결과 출력하기
+console.log(A-B); // 결과(A-B의 값) 출력하기
