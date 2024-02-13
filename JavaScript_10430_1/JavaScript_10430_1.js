@@ -14,8 +14,7 @@ const A = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 A에 저�
 const B = parseInt(input[1]); // input[1]을 정수형으로 바꿔서 B에 저장
 const C = parseInt(input[2]); // input[2]을 정수형으로 바꿔서 C에 저장
 
-// 결과 출력하기
-console.log((A+B)%C);
-console.log(((A%C) + (B%C))%C);
-console.log((A*B)%C);
-console.log(((A%C) * (B%C))%C);
+console.log((A+B)%C); // (A+B)%C의 값 출력하기
+console.log(((A%C) + (B%C))%C); // ((A%C) + (B%C))%C의 값 출력하기
+console.log((A*B)%C); // (A*B)%C의 값 출력하기
+console.log(((A%C) * (B%C))%C); // ((A%C) * (B%C))%C의 값 출력하기
