@@ -6,6 +6,7 @@
 개를 출력한다.
 */
 
+// 결과 출력
 console.log("|\\_/|");
 console.log("|q p|   /}");
 console.log("( 0 )\"\"\"\\");
