@@ -13,4 +13,4 @@ const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split(); // 입력받은 걸 읽어서 문자열로 만든 후, 배열 형태로 input에 저장
 const n = parseInt(input[0]); // input[0]을 정수형으로 형변환하여 n에 저장
 
-console.log(n-543);
+console.log(n-543); // 결과 출력하기
