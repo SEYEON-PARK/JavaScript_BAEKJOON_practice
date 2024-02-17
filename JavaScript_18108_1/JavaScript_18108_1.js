@@ -8,3 +8,9 @@ ICPC Bangkok Regional에 참가하기 위해 수완나품 국제공항에 막 �
 
 불기 연도를 서기 연도로 변환한 결과를 출력한다.
 */
+
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().split(); 
+const n = parseInt(input[0]); // input[0]을 정수형으로 형변환하여 n에 저장
+
+console.log(n-543);
