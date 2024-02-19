@@ -17,9 +17,9 @@ const B = parseInt(input[1]); // input[1]을 정수형으로 바꿔서 B에 저�
 if(A>B){ // 만약, A가 B보다 크다면
     console.log('>'); // '>' 출력하기
 }
-else if(A===B){
-    console.log('==');
+else if(A===B){ // 만약 A가 B보다 크지 않고, A와 B가 같다면
+    console.log('=='); // '==' 출력하기
 }
-else{
-    console.log('<');
+else{ // A가 B보다 크지 않고, A와 B가 같지도 않다면
+    console.log('<'); // '<' 출력하기
 }
