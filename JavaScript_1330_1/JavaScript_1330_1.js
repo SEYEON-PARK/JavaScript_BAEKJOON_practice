@@ -8,3 +8,18 @@
   - A가 B보다 작은 경우에는 '<'를 출력한다.
   - A와 B가 같은 경우에는 '=='를 출력한다.
 */
+
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().split(' '); // 공백을 기준으로 잘라서 배열을 만들어 input에 저장
+const A = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 A에 저장
+const B = parseInt(input[1]); 
+
+if(A>B){
+    console.log('>');
+}
+else if(A===B){
+    console.log('==');
+}
+else{
+    console.log('<');
+}
