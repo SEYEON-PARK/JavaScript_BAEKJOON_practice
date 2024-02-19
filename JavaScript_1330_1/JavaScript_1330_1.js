@@ -14,8 +14,8 @@ const input = fs.readFileSync('/dev/stdin').toString().split(' '); // 공백을 
 const A = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 A에 저장
 const B = parseInt(input[1]); // input[1]을 정수형으로 바꿔서 B에 저장
 
-if(A>B){
-    console.log('>');
+if(A>B){ // 만약, A가 B보다 크다면
+    console.log('>'); // '>' 출력하기
 }
 else if(A===B){
     console.log('==');
