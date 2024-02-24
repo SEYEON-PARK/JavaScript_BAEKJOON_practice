@@ -8,6 +8,6 @@
 */
 
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().trim(); // 내용을 읽어들여 문자열로 바꾸고, 앞뒤 공백을 없애서 input에 대입하
+const input = fs.readFileSync('/dev/stdin').toString().trim(); // 내용을 읽어들여 문자열로 바꾸고, 앞뒤 공백을 없애서 input에 대입하기
 
 console.log(input+"??!"); // 결과 출력하기
