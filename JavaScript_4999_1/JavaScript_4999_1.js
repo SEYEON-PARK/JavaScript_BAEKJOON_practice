@@ -15,7 +15,7 @@
 const fs = require('fs');
 const input = fs.readFileSync('/dev/stdin').toString().split('\n'); // input에 입력받은 내용을 줄바꿈 문자를 기준으로 잘라서 문자열 배열로 저장
 
-if(input[0].length >= input[1].length)
-    console.log("go");
+if(input[0].length >= input[1].length) // 만약, 문자열 input[0]의 길이가 문자열 input[1]의 길이보다 길거나 같다면 
+    console.log("go"); // "go" 출력하기
 else
     console.log("no");
