@@ -11,3 +11,11 @@
 
 재환이가 그 병원에 가야하면 "go"를, 아니면 "no"를 출력한다.
 */
+
+const fs = require('fs');
+const input = fs.readFileSync('/dev/stdin').toString().split('\n'); 
+
+if(input[0].length >= input[1].length)
+    console.log("go");
+else
+    console.log("no");
