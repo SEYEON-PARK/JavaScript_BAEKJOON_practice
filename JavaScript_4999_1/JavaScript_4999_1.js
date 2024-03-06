@@ -17,5 +17,5 @@ const input = fs.readFileSync('/dev/stdin').toString().split('\n'); // input에 
 
 if(input[0].length >= input[1].length) // 만약, 문자열 input[0]의 길이가 문자열 input[1]의 길이보다 길거나 같다면 
     console.log("go"); // "go" 출력하기
-else
-    console.log("no");
+else // 문자열 input[0]의 길이가 문자열 input[1]의 길이보다 길거나 같지 않다면(짧다면) 
+    console.log("no"); // "no" 출력하기
