@@ -13,7 +13,7 @@
 */
 
 const fs = require('fs');
-const input = fs.readFileSync('/dev/stdin').toString().split('\n'); 
+const input = fs.readFileSync('/dev/stdin').toString().split('\n'); // input에 입력받은 내용을 줄바꿈 문자를 기준으로 잘라서 문자열 배열로 저장
 
 if(input[0].length >= input[1].length)
     console.log("go");
