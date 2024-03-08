@@ -7,3 +7,25 @@
 
 점 (x, y)의 사분면 번호(1, 2, 3, 4 중 하나)를 출력한다.
 */
+
+const fs = require('fs');
+const input = fs.readFileSync(0).toString().split('\n'); // 공백을 기준으로 잘라서 배열을 만들어 input에 저장
+const x = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 x에 저장
+const y = parseInt(input[1]); // input[1]을 정수형으로 바꿔서 y에 저장
+
+if(x > 0){
+    if(y > 0){
+        console.log("1");
+    }
+    else{
+        console.log("4");
+    }
+}
+else{
+    if(y > 0){
+        console.log("2");
+    }
+    else{
+        console.log("3");
+    }
+}
