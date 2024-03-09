@@ -13,9 +13,9 @@ const input = fs.readFileSync(0).toString().split('\n'); // 줄바꿈을 기준�
 const x = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 x에 저장
 const y = parseInt(input[1]); // input[1]을 정수형으로 바꿔서 y에 저장
 
-if(x > 0){
-    if(y > 0){
-        console.log("1");
+if(x > 0){ // 만약, x가 0보다 크다면
+    if(y > 0){ // 만약, y가 0보다 크다면
+        console.log("1"); // "1" 출력하기
     }
     else{
         console.log("4");
