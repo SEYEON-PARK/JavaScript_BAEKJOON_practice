@@ -9,7 +9,7 @@
 */
 
 const fs = require('fs');
-const input = fs.readFileSync(0).toString().split('\n'); // 공백을 기준으로 잘라서 배열을 만들어 input에 저장
+const input = fs.readFileSync(0).toString().split('\n'); // 줄바꿈을 기준으로 잘라서 배열을 만들어 input에 저장(파일 디스크립터 0번을 기준으로 받는다.)
 const x = parseInt(input[0]); // input[0]을 정수형으로 바꿔서 x에 저장
 const y = parseInt(input[1]); // input[1]을 정수형으로 바꿔서 y에 저장
 
